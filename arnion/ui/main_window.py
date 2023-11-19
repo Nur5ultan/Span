@@ -52,7 +52,7 @@ class MainWindow:
 
         # Добавление кнопки отчетов "Сотрудники"
         btn_dp_employee = tk.Button(self.window,
-                                  text="Отделы",
+                                  text="Сотрудники",
                                   font=("Helvetica", 10, "bold"),
                                   bg="#ccffcc")
         btn_dp_employee.place(x=160, y=200, width=120, height=50)
