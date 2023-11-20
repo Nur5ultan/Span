@@ -1,4 +1,6 @@
 import tkinter as tk
+from arnion.db.my_sql_connection import ConnectionHandler
+
 
 class MainWindow:
 
@@ -58,6 +60,13 @@ class MainWindow:
         btn_dp_employee.place(x=160, y=200, width=120, height=50)
 
 
+        # Добавление кнопки тест
+        btn_test = tk.Button(self.window, text='Тест',
+                             font=("Helvetica", 10, "bold"),
+                             bg="#ffffcc",
+                             command=self.do_test)
+        btn_test.place(x=25, y=300, width=120, height=50)
+
         # Добавление кнопки закрытия программы
         btn_close = tk.Button(self.window,
                               text="Выход",
@@ -66,7 +75,10 @@ class MainWindow:
                               command=self.close)
         btn_close.place(x=160, y=300, width=120, height=50)
 
-
+    # Функция тест
+    def do_test(self):
+        ch = ConnectionHandler()
+        ch.do_test()
 
     # Функция закрытия главного окна программы
     def close(self):
