@@ -39,3 +39,22 @@ VALUES ("Галина", "Руслановна", "Маргаритова", 1)
 
 INSERT INTO employees (first_name, middle_name, last_name departments_id)
 VALUES ("Артём", "Николаевич", "Григорин", 2)
+
+INSERT INTO employees (first_name, middle_name, last_name departments_id)
+VALUES ("Арсений", "Васильевич", "Русланов", 2)
+
+INSERT INTO employees (first_name, middle_name, last_name departments_id)
+VALUES ("Елена", "Романовна", "Каннова", 2)
+
+INSERT INTO employees (first_name, middle_name, last_name departments_id)
+VALUES ("Алексей", "Аркадьевич", "Артёмов", 3)
+
+INSERT INTO employees (first_name, middle_name, last_name departments_id)
+VALUES ("Вероника", "Филипповна", "Еленова", 3)
+
+INSERT INTO employees (first_name, middle_name, last_name departments_id)
+VALUES ("Марина", "Вмтальевна", "Лилова", 3)
+
+INSERT INTO employees (first_name, middle_name, last_name departments_id)
+VALUES ("Ева", "Валентиновна", "Оксанова", 3)
+

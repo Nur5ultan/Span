@@ -3,6 +3,7 @@ import tkinter as tk
 from arnion.data.departments_data import DepartmentDataHandler
 from arnion.data.employees_data import EmployeeDataHandler
 from arnion.db.my_sql_connection import ConnectionHandler
+from arnion.ui.departments_reports_ui import DepartmentsReportWindow
 
 
 class MainWindow:
@@ -49,18 +50,20 @@ class MainWindow:
         lbl_title_2.place(x=25, y=155, width=250, height=50)
 
         # Добавление кнопки отчетов "Отделы"
-        btn_dp_report = tk.Button(self.window,
-                                  text="Отделы",
-                                  font=("Helvetica", 10, "bold"),
-                                  bg="#ccffcc")
-        btn_dp_report.place(x=25, y=200, width=120, height=50)
+        btn_report_departments = tk.Button(self.window,
+                                           text="Отделы",
+                                           font=("Helvetica", 10, "bold"),
+                                           bg="#ccffcc",
+                                           command=self.do_report_departments)
+        btn_report_departments.place(x=25, y=200, width=120, height=50)
 
         # Добавление кнопки отчетов "Сотрудники"
-        btn_dp_employee = tk.Button(self.window,
-                                  text="Сотрудники",
-                                  font=("Helvetica", 10, "bold"),
-                                  bg="#ccffcc")
-        btn_dp_employee.place(x=160, y=200, width=120, height=50)
+        btn_report_employees = tk.Button(self.window,
+                                         text="Сотрудники",
+                                         font=("Helvetica", 10, "bold"),
+                                         bg="#ccffcc",
+                                         command=self.do_report_employees)
+        btn_report_employees.place(x=160, y=200, width=120, height=50)
 
 
         # Добавление кнопки тест
@@ -83,6 +86,15 @@ class MainWindow:
         employees = EmployeeDataHandler.select_list()
         for employee in employees:
             print(employee.get_full_name())
+
+    # Открытия отчета "Отделы"
+    def do_report_departments(self):
+        rpt = DepartmentsReportWindow()
+        rpt.open()
+
+    # Открытия отчета "Сотрудники"
+    def do_report_employees(self):
+        pass
 
     # Функция закрытия главного окна программы
     def close(self):
