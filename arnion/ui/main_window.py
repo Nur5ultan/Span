@@ -2,8 +2,9 @@ import tkinter as tk
 
 from arnion.data.departments_data import DepartmentDataHandler
 from arnion.data.employees_data import EmployeeDataHandler
-from arnion.db.my_sql_connection import ConnectionHandler
+# from arnion.db.my_sql_connection import ConnectionHandler
 from arnion.ui.departments_reports_ui import DepartmentsReportWindow
+from arnion.ui.employees_reports_ui import EmployeesReportWindow
 
 
 class MainWindow:
@@ -94,7 +95,8 @@ class MainWindow:
 
     # Открытия отчета "Сотрудники"
     def do_report_employees(self):
-        pass
+        rpt = EmployeesReportWindow()
+        rpt.open()
 
     # Функция закрытия главного окна программы
     def close(self):
