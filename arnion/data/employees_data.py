@@ -14,13 +14,13 @@ class EmployeeDataObject:
         department_id=0,
     ):
         self.employee_id = employee_id
-        self.firs_name = first_name
+        self.first_name = first_name
         self.middle_name = middle_name
         self.last_name = last_name
         self.department_id = department_id
 
     def get_full_name(self):
-        full_name = self.firs_name + " " + self.middle_name + " " + self.last_name
+        full_name = self.first_name + " " + self.middle_name + " " + self.last_name
         return full_name
 
 
@@ -105,7 +105,7 @@ class EmployeeDataHandler:
                 insert_query = (
                     "INSERT INTO employees (first_name, middle_name, last_name, department_id) " \
                     "VALUES ('" \
-                    + employee.firs_name + "', '" + employee.middle_name + "', '" \
+                    + employee.first_name + "', '" + employee.middle_name + "', '" \
                     + employee.last_name + "', " + str(employee.department_id) + ")"
                 )
                 with cnn.cursor() as cursor:
